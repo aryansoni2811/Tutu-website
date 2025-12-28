@@ -1,0 +1,118 @@
+/* ================= PAGE BACKGROUND ================= */
+
+.final-page {
+  position: relative;
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      rgba(246, 193, 204, 0.8),
+      rgba(246, 193, 204, 0.8)
+    ),
+    url("../assets/images/her6.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* ================= CONTENT ================= */
+
+.final-content {
+  max-width: 650px;
+  text-align: center;
+  z-index: 2;
+}
+
+.final-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--deep-grey);
+}
+
+.final-content p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--deep-grey);
+}
+
+.final-note {
+  margin-top: 18px;
+  font-weight: 500;
+}
+
+/* ================= FLOWER SHOWER ================= */
+
+.petals {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.petal {
+  position: absolute;
+  top: -10%;
+  width: 20px;
+  height: 20px;
+  background: #e88aa0; /* 🔥 darker rose pink */
+  opacity: 0.9;
+  border-radius: 60% 40% 60% 40%;
+  transform: rotate(45deg);
+  animation: fall linear infinite;
+}
+
+/* RANDOMIZED POSITIONS + SPEEDS */
+.petal:nth-child(odd) {
+  width: 16px;
+  height: 16px;
+  background: #e06f8f;
+}
+
+.petal:nth-child(even) {
+  width: 22px;
+  height: 22px;
+  background: #ec9aad;
+}
+
+.petal:nth-child(1)  { left: 3%;  animation-duration: 9s; }
+.petal:nth-child(2)  { left: 8%;  animation-duration: 11s; }
+.petal:nth-child(3)  { left: 14%; animation-duration: 10s; }
+.petal:nth-child(4)  { left: 20%; animation-duration: 13s; }
+.petal:nth-child(5)  { left: 26%; animation-duration: 8s; }
+.petal:nth-child(6)  { left: 32%; animation-duration: 12s; }
+.petal:nth-child(7)  { left: 38%; animation-duration: 9s; }
+.petal:nth-child(8)  { left: 44%; animation-duration: 11s; }
+.petal:nth-child(9)  { left: 50%; animation-duration: 10s; }
+.petal:nth-child(10) { left: 56%; animation-duration: 13s; }
+.petal:nth-child(11) { left: 62%; animation-duration: 8s; }
+.petal:nth-child(12) { left: 68%; animation-duration: 12s; }
+.petal:nth-child(13) { left: 74%; animation-duration: 9s; }
+.petal:nth-child(14) { left: 80%; animation-duration: 11s; }
+.petal:nth-child(15) { left: 86%; animation-duration: 10s; }
+.petal:nth-child(16) { left: 92%; animation-duration: 13s; }
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px) {
+  .final-content h1 {
+    font-size: 30px;
+  }
+
+  .final-content p {
+    font-size: 14px;
+  }
+}

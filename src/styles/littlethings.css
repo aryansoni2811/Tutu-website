@@ -1,0 +1,92 @@
+/* ================= DESKTOP ================= */
+
+.little-things-container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-top: 80px;
+}
+
+/* TEXT */
+.little-things-content h1 {
+  margin-bottom: 20px;
+}
+
+.little-things-list {
+  list-style: none;
+  padding: 0;
+  max-width: 540px;
+}
+
+.little-things-list li {
+  margin-bottom: 20px;
+  line-height: 1.9;
+  font-size: 15px;
+  color: var(--soft-grey);
+}
+
+/* BUTTON */
+.little-things-btn {
+  margin-top: 30px;
+  padding: 10px 28px;
+  border-radius: 30px;
+  background: var(--rose-tint);
+}
+
+/* ================= PORTRAIT IMAGE STRIP ================= */
+
+.portrait-gallery {
+  width: 70%;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.portrait-gallery img {
+  width: 100%;
+  height: 260px;            /* 🔥 portrait height */
+  object-fit: cover;
+  border-radius: 18px;
+  transition: transform 0.3s ease;
+}
+
+.portrait-gallery img:hover {
+  transform: scale(1.04);
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+  .little-things-container {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait-gallery {
+    width: 75%;
+    margin: 40px auto 0;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px) {
+  .little-things-list li {
+    font-size: 14px;
+  }
+
+  .portrait-gallery {
+    width: 85%;
+    margin: 30px auto 0;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .portrait-gallery img {
+    height: 220px;
+  }
+
+  .little-things-btn {
+    width: 100%;
+  }
+}

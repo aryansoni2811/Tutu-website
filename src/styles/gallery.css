@@ -1,0 +1,99 @@
+/* ================= DESKTOP ================= */
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-top: 80px;
+}
+
+/* TEXT */
+.gallery-text h1 {
+  margin-bottom: 10px;
+}
+
+.gallery-subtitle {
+  font-size: 14px;
+  color: var(--soft-grey);
+  margin-bottom: 20px;
+}
+
+.gallery-description {
+  max-width: 540px;
+  line-height: 1.9;
+  font-size: 15px;
+  color: var(--soft-grey);
+}
+
+/* BUTTON */
+.gallery-btn {
+  margin-top: 35px;
+  padding: 10px 28px;
+  border-radius: 30px;
+  background: var(--baby-pink);
+  transition: transform 0.2s ease;
+}
+
+.gallery-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= PORTRAIT MEDIA ================= */
+
+.gallery-media {
+  width: 70%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gallery-media img,
+.gallery-media video {
+  width: 100%;
+  height: 360px;            /* portrait-friendly */
+  object-fit: cover;
+  border-radius: 20px;
+  background: #000;
+}
+
+/* Remove video controls look completely */
+.gallery-media video {
+  pointer-events: none;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-media {
+    width: 75%;
+    margin: 40px auto 0;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px) {
+  .gallery-description {
+    font-size: 14px;
+  }
+
+  .gallery-media {
+    width: 85%;
+    margin: 30px auto 0;
+  }
+
+  .gallery-media img,
+  .gallery-media video {
+    height: 300px;
+  }
+
+  .gallery-btn {
+    width: 100%;
+  }
+}

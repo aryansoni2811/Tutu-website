@@ -1,0 +1,101 @@
+/* ================= CONTAINER ================= */
+
+.birthday-note-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  text-align: center;
+}
+
+/* ================= TEXT ================= */
+
+.birthday-note-text {
+  max-width: 620px;
+}
+
+.birthday-note-text h1 {
+  margin-bottom: 20px;
+}
+
+.birthday-note-text p {
+  line-height: 1.9;
+  font-size: 15px;
+  color: var(--soft-grey);
+}
+
+/* ================= MOON IMAGE ================= */
+
+.moon-image-wrapper {
+  margin-top: 35px;
+  width: 220px;
+  height: 220px;
+}
+
+.moon-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+/* ================= PORTRAIT GALLERY ================= */
+
+.portrait-gallery {
+  margin-top: 35px;
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.portrait-gallery img {
+  width: 100%;
+  height: 260px;        /* portrait feel */
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* ================= BUTTON ================= */
+
+.birthday-note-btn {
+  margin-top: 45px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  background: var(--blush-pink);
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+  .portrait-gallery {
+    width: 85%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px) {
+  .birthday-note-text p {
+    font-size: 14px;
+  }
+
+  .moon-image-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+
+  .portrait-gallery {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+
+  .portrait-gallery img {
+    height: 320px;
+  }
+
+  .birthday-note-btn {
+    width: 100%;
+  }
+}
